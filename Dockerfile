@@ -1,2 +1,5 @@
-FROM nginx
-COPY . /usr/share/nginx/html
+FROM pypy:latest
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+CMD python garden.py
