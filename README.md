@@ -1,4 +1,4 @@
-# NLP_Task1
+# NLP: Tokenisation and Entity recognition
 
 To run the garden.py file, follow the instructions below:
 
