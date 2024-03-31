@@ -12,12 +12,14 @@ gardenpathSentences.append("That Jill is never here hurts.")
 gardenpathSentences.append("The cotton clothing is made of grows in Mississippi.")
 
 # Tokenise each sentence and Named entity recognition:
+print("\nNamed entity recognition:")
 for i in gardenpathSentences:
     doc = nlp(i)
     print([token.orth_ for token in doc])
     print([(w, w.label_) for w in doc.ents])
 
 # Tokenise and Entity recognition:
+print("\nEntity recognition:")
 for i in gardenpathSentences:
     doc = nlp(i)
     print([token.orth_ for token in doc])
@@ -26,7 +28,9 @@ for i in gardenpathSentences:
             print(word)
 
 # Entity explanation:
+print("\nEntity explanation:")
 print(spacy.explain("PERSON"))
+print(spacy.explain("GPE"))
 
 # PERSON: People, including fictional. Correct, this was given to the names Mary and Jill.
 
